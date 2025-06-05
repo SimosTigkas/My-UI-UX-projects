@@ -1,0 +1,12 @@
+Typography
+
+Good typography requires the understanding of other fundamentals, 
+along with a few special considerations like the following:
+
+1) Font choice(s) (not more than 2)
+2) Visual Hierarchy
+3) Font size (scale)
+4) Alignment
+5) Letter spacing & line height
+6) Font styles (weight, italics, etc..)
+7) Color & Contrast

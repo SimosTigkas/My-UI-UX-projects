@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+
+- White Space
+- Color 
+- Contrast 
+- Scale
+- Alignment
+- Typography
+- Visual Hierarchy
+
+*/
+
+body {
+    background: #000 url('./cinematic4.jpg');
+    background-size: cover;
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+    color: white;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: 3em 4em;
+    height: 100vh;
+    width: 45%;
+    position: relative;
+    background: rgba(0, 0, 0, .7);
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0;
+    line-height: 1em;
+    position: relative;
+    z-index: 0;
+}
+h1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 15px;
+    width: 35%;
+    left: 1em;
+    background: hsl(39, 100%, 60%);
+    z-index: -1;
+}
+
+p {
+    margin-top: 2em;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    position: relative;
+    z-index: 0;
+    text-transform: uppercase;
+}

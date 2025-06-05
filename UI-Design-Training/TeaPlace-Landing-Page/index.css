@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* COLOR SCHEME: #AADFC5, #47946E, #7A4900, black, white */
+
+body {
+    font-family: 'Montserrat';
+    background: #AADFC5;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 1.5em;
+    cursor: pointer;
+}
+
+ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    height: 100vh;
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(50%);
+    place-content: center;
+    z-index: 1;
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+ul li a {
+    color: black;
+    padding: 1em;
+    display: block;
+    font-size: 1.4em;
+    margin-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /* font-size: 1.1em; */
+}
+
+.exit svg {
+    width: 1.5em;
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    cursor: pointer;
+}
+
+.active a {
+    color: #377254;
+}
+
+.logo {
+    text-transform: uppercase;
+}
+
+.content-wrapper {
+    padding: 1em;
+}
+
+main {
+    padding: 2em;
+    border-radius: 12px;
+    /* border: #7A4900 2px solid;
+    background: #47946E; */
+    text-align: center;
+    /* z-index: -2; */
+}
+
+main h1 {
+    font-size: 1.5em;
+    color: black;
+}
+
+.cta {
+    display: block;
+    margin-bottom: 1em;
+    white-space: nowrap;
+    background: #7A4900;
+    border-radius: 12px;
+    padding: 0.5em 1em;
+}
+
+.outline {
+    background: none;
+    border: 2px solid #47946E;
+    color: black;
+}
+
+.plant-container {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+p {
+    font-size: .9em;
+    line-height: 1.4em;
+    width: 90%;
+    margin: 0 auto 2em;
+}
+
+.plant {
+    width: 350px;
+    position: absolute;
+    right: -1%;
+    bottom: -20%;
+}
+
+.fern {
+    background: url('fern.svg') no-repeat;
+    height: 70vh;
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+@media (min-width: 650px) {
+    body {
+        font-size: 18px;
+    }
+
+    main h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+    }
+    .cta {
+        padding: .7em 1.2em;
+    }
+    .outline {
+        margin-left: 1em;
+    }
+}
+
+@media (min-width: 800px) {
+   .menu, .exit {
+        display: none;
+    }
+
+    main {
+        justify-items: left;
+    }
+
+    ul {
+        display: flex;
+        background: none;
+        height: unset;
+        position: unset;
+        text-transform: uppercase;
+        visibility: unset;
+        opacity: 1;
+        width: 52%;
+    }
+
+    ul li a {
+        font-size: .9em;
+        padding: 0 .5em;
+    }
+
+    .left-col {
+        width: 60%;
+        background: #47946E;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    .plant {
+        width: 43%;
+        position: absolute;
+        right: 4%;
+        bottom: -3%;
+    }
+
+    .fern {
+        top: 26%;
+    }
+
+    .outline {
+        border: 2px solid white;
+    }
+
+    p {
+        margin-left: 0;
+        text-align: left;
+        width: 60%;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+    }
+    .cta {
+        padding: .7em 1.2em;
+    }
+    .outline {
+        margin-left: 1em;
+    }
+}
