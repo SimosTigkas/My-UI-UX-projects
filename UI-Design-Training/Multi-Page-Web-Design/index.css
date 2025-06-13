@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #D8EACB;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    text-align: right;
+    right: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#D8EACB;
+    padding: .5em;
+}
+
+.logo {
+    color: black;
+    font-weight: bold;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+nav ul {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 40%;
+    top: 0;
+    right: 0;
+    background: #72A84A;
+    height: 100vh;
+    padding-top: 5em;
+    z-index: 100;
+    transform: translateX(50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.exit a {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0.4em;
+    left: 0.4em;
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+    text-align: right;
+    padding: 1em;
+}
+
+nav ul li {
+    padding: 1.5em 0em;
+}
+
+.forest-hero {
+    background: url('images/forest.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.wrapper {
+    padding: .5em;
+    text-align: center;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.subtitle {
+    padding: 3em 0 .5em;
+}
+
+h1 span {
+    display: block;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); 
+}
+
+.cta {
+    display: inline-block;
+    color: white;
+    background: hsl(94, 39%, 37%);
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 3em;
+    margin-top:1em;
+}
+
+.cta:hover {
+    background: hsl(94, 39%, 27%);
+    transition: background 1s ease-in-out;
+}
+
+ul.featured-cabins {
+    width: 60%;
+    margin: 0 auto;
+}
+
+ul.featured-cabins li {
+    margin-bottom: 3em;
+}
+
+.cabin-img {
+    box-shadow: 10px 10px 10px rgba(0,0,0,.2);
+}
+
+.cabin-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+}
+
+.cabin-title:hover {
+    color: hsl(94, 39%, 57%);
+    transition: color 1s ease-in-out;
+}
+
+.cabin-desc {
+    font-size: 1.3em;
+    line-height: 1.3;
+    margin-bottom: 1em;
+}
+
+.cabin-desc:hover {
+    color: hsl(94, 39%, 57%);
+    transition: color 1s ease-in-out;
+}
+
+.cabin-cta img {
+    width: 20px;
+}
+
+.cabin-cta {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cabin-cta:after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    background: white;
+    width: 100%;
+    height: 1px;
+}
+
+.cabin-cta span {
+    color: white;
+    font-weight: bold;
+}
+
+.cabin-cta span:hover {
+    color: hsl(94, 39%, 57%);
+    transition: color 1s ease-in-out;
+}
+
+.feature-container {
+    background: #1A1A1A;
+    color: white;
+}
+
+
+ul.features {
+    margin: 3em auto;
+    width: 70%;
+}
+
+ul.features li img {
+    width: 50px;
+}
+
+ul.features li p {
+    color: #CCCCCC;
+}
+
+.main-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.main-cite {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3em;
+}
+
+
+.test-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+    margin-top: 3.5em;
+    z-index: 2;
+    position: relative;
+}
+
+p.test-desc {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+p.test-auth {
+    font-weight: bold;
+    font-size: .85em;
+}
+
+.last-container {
+    position: relative;
+}
+
+.fern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 80%;
+    opacity: .1;
+}
+
+@media (min-width: 650px) {
+    .subtitle {
+        padding: 3em 0 .5em;
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+
+    h1 span {
+        display: unset;
+        font-size: 1.5em;
+        width: 100%;
+        height: 25%;
+    }
+
+    .cta {
+        display: inline-block;
+        padding: 1em 2em;
+        font-size: 1.3em;
+        margin-top: 1em;
+    }
+
+    .test-img {
+        width: 130px;
+        height: 130px;
+        margin-top: 3.5em;
+    }
+
+    p.test-desc {
+        font-size: 1.3em;
+    }
+
+    p.test-auth {
+        font-size: 1em;
+    }
+}
+
+@media(min-width: 750px) {
+    .menu, .exit {
+        display: none;
+    }
+    
+    header {
+        padding: 1em;
+    }
+    
+    ul.nav {
+        visibility: unset;
+        opacity: 1;
+        background: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: unset;
+        height: auto;
+        transform: translateX(0);
+    }
+    
+    ul.nav li a {
+        font-size: .9em;
+        padding: 0 1em;
+        font-weight: normal;
+    }
+    
+    ul.nav li {
+        padding: 0;
+    }
+
+    ul.nav li:last-child a {
+        padding-right: 0;
+    }
+    
+    ul.nav .active a {
+        font-weight: bold;
+    }
+    
+    ul.nav .res a {
+        color: #72A84A;
+        font-weight: bold;
+    }
+    
+    ul.featured-cabins {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 1.5em;
+    }
+
+    ul.features {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 3em;
+    }
+
+    .cabin-img {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+
+@media(min-width: 1000px) {
+    .testimonials {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 1em;
+        padding: 0em 3.4em;
+    }
+
+    .cabin-img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .left {
+        padding: 0em 3em;
+    }
+
+    .fern {
+        width: 30%;
+    }
+}

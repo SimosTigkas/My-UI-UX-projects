@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    padding: 4em 2em;
+    height: 50vh;
+    color: white;
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(245, 153, 15, 1) 0%, rgba(63, 180, 252, 1) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+img {
+    position: absolute;
+    left: -20px;
+    top: 3em;
+    z-index: -1;
+    width: 100%;
+    opacity: .4;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: .6em 1em;
+    margin-top: 1em;
+    display: inline-block;
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(191, 191, 191, 1) 0%, rgba(101, 102, 102, 1) 100%);
+    color: white;
+    font-weight: bold;
+    border-radius: .3em;
+}

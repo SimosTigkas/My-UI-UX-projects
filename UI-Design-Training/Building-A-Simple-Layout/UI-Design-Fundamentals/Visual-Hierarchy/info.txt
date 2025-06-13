@@ -1,0 +1,5 @@
+Visual Hierarchy:
+
+Every element on a user interface has a level of importance. Some elements
+are more important than others. Visual hierarchy is how we establish this
+importance.

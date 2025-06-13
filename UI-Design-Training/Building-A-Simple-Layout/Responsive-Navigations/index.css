@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito';
+    height: 100vh; /* For the sidebar to go all the way down */
+}
+
+header {
+    background: hsl(206, 23%, 31%);
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; /*to prevenet scorebars when we put animations later */
+}
+
+
+a.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1em .5em 0;
+}
+
+nav {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: hsl(207, 13%, 23%);
+    width: 66%;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.exit {
+    width: 2em;
+    float: right;
+    margin: .5em;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 4em;
+}
+
+li a {
+    color:hsl(206, 10%, 63%);
+    text-decoration: none;
+    display: block;
+    padding: .5em 1em;
+}
+
+.open {
+    cursor: pointer;
+    margin: .5em;
+}
+
+.active a {
+    color: hsl(207, 100%, 49%);
+    font-weight: bold;
+}
+
+li a:hover {
+    background: hsl(209, 54%, 21%);
+
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (min-width: 700px) {
+    .open, .exit {
+        display: none;
+    }
+    
+    nav {
+        visibility: unset;
+        background: none;
+        position: unset;
+        height: auto;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    ul {
+        margin-top: auto;
+        display: flex;
+        width: auto;
+        float: right;
+        margin: 0;
+    }
+
+    li a {
+        color: #ADDBFF;
+        display: block;
+        padding: 1em;
+    }
+
+    .active a {
+        color: white;
+    }
+}

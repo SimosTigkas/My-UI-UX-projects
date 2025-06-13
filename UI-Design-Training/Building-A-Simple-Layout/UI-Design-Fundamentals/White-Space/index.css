@@ -1,0 +1,12 @@
+
+.secondary {
+    padding: 1.5em; /* and margin for whitespace */
+}
+
+.secondary h1 {
+    margin-bottom: .5em;
+}
+
+.secondary p {
+    line-height: 1.5em;
+}

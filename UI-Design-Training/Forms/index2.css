@@ -1,0 +1,22 @@
+
+label.left-label {
+    display: unset;
+    font-weight: normal;
+    margin-right: 2em;
+}
+
+.mt-extra {
+    margin-top: 2em;
+}
+
+label {
+    display: unset;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+.extra-height {
+    min-height: 150px;
+}

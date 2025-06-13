@@ -1,0 +1,6 @@
+Color:
+
+The first UI design fundamental that shapes a user's experience is color.
+
+green: wealth, nature, growth
+black: luxury, sophistication, elegance

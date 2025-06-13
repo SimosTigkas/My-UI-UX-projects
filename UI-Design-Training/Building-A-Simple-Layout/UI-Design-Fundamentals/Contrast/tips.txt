@@ -1,0 +1,13 @@
+Web Contact Accesibility Guidelines 2.0 Contrast Guidelines:
+
+(Minimum AA)
+The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for large text which should have a contrast ratio of at least 3:1.
+
+
+(Enhanced AAA)
+The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for large text which should have a contrast ratio of at least 4.5:1.
+
+Contrast Checking Tools:
+1) Browser Plugins
+2) Websites
+3) UI Designs Application Plugins

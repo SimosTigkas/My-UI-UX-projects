@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+    background-color: hsl(219, 79%, 66%);
+    overflow: hidden;
+}
+
+
+
+/* My fixes: */
+
+.container {
+    height: 100vh;
+    padding: 4em;
+}
+
+.container h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 3em;
+}
+
+.container p {
+    font-size: 1.3em;
+    padding-left: 2em;
+    border-left: 4px solid gray;
+    z-index: 2;
+    position: relative;
+}
+
+span {
+
+    font-size: .4em;
+    background: hsl(219, 79%, 56%);
+    color: black;
+    padding: .2em .4em;
+    border-radius: 1em;
+    display: inline-block;
+}
+
+span:before {
+    content: '1:30PM';
+    font-size: 10em;
+    position: absolute;
+    color: #f4f4f445;
+    z-index: 1;
+    white-space: nowrap;
+    left: 20%;
+    top: 13%;
+}

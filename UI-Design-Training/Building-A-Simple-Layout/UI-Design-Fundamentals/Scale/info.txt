@@ -1,0 +1,4 @@
+Scale:
+
+Just as with alignment, white space, contrast and the other fundamentals.
+The size pf every UI element must be carefully considered. 
