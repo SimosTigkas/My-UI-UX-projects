@@ -1,0 +1,44 @@
+services:
+
+  frontend_service:
+    container_name: frontend_container
+    build: frontend
+    ports:
+       - '8042:8042'
+    volumes:
+      - ./frontend/frontend_source:/var/www/html
+    networks:
+      - pong_network
+    depends_on:
+      - backend_service
+
+  backend_service:
+    container_name: backend_container
+    build: backend
+    expose:
+      - "8000"
+    env_file: .env
+    networks:
+      - pong_network
+    depends_on:
+      - database_service
+
+  database_service:
+    container_name: postgres_container
+    image: postgres:17.2-bullseye
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file: .env
+    expose:
+      - 5432
+    networks:
+      - pong_network
+
+volumes:
+  postgres_data:
+    name: postgres_data
+
+networks:
+  pong_network:
+    name: pong_network
+    driver: bridge

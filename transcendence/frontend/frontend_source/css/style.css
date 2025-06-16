@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+:root
+{
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    --text-secondary: #ececec;
+    --transition-speed: 600ms;
+    color: #000000;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('perry.jpg');
+    background-size: cover;
+    background-position: 100%;
+    opacity: 0.68; 
+    z-index: -1;
+}
+
+.first-card {
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px #ffffff;
+    background-color: #ffa500;
+}
+
+#error-alert {
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding-right: 40px;
+    z-index: 1000;
+}
+
+#error-message {
+    margin-right: 20px;
+}
+
+.btn-close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-8%);
+}
+
+
+/* ----------------------------- Navbar Style ----------------------------- */
+
+.navbar
+{
+    position: fixed;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    background-color: #222222;
+    opacity: 0;
+    display: "none";
+    z-index: 1;
+    transition: width 600ms ease;
+    -webkit-transition: opacity 600ms ease;
+    -moz-transition: opacity 600ms ease;
+    -ms-transition: opacity 600ms ease;
+    -o-transition: opacity 600ms ease;
+    transition: opacity 600ms ease;
+}
+
+.navbar:hover
+{
+    width: 15rem;
+}
+
+.navbar:hover .link-text
+{
+    display: inline;
+}
+
+.navbar_nav
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav_item
+{
+    width: 100%;
+}
+
+.nav_link
+{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #eeeeee;
+    text-decoration: none;
+    transition: var(--transition-speed);
+    filter: grayscale(100%) opacity(0.7);
+}
+
+.nav_link svg
+{
+    width: 3rem;
+    min-width: 3rem;
+    margin: 1rem;
+}
+
+.nav_link:hover
+{
+    filter: grayscale(0%) opacity(1);
+    background: #006666;
+    color: var(--text-secondary);
+}
+
+object
+{
+    pointer-events: none;
+}
+
+.link-text
+{
+    display: none;
+    margin-left: 1rem;
+}
+
+a
+{
+    color: #009579;
+}
+
+
+/* ----------------------------- Content Style ----------------------------- */
+
+#content
+{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+}
+
+
+.teal-container {
+    position: relative;
+    /*height: 30vh;*/
+    height: 45%;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teal-box {
+    background-color: teal;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    border: 3px solid white;
+    color: #005252;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.teal-container:hover .hover-overlay {
+    opacity: 0;
+}
+
+.teal-container:hover .teal-box {
+    opacity: 1;
+}
+
+
+#content label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#content select {
+    max-width: 220px;
+}
+
+#content .btn {
+    min-width: 180px;
+}
+
+.game-card {
+    background-color: orange !important;
+    box-shadow: 0px 0px 5px white !important;
+    border-radius: 24px;
+}
+
+.go-back-btn {
+    box-shadow: 0px 0px 5px white !important;
+    border-radius: 24px;
+}
+
+.game-status-card {
+    color: orange;
+    background-color: #005252 !important;
+    box-shadow: 0px 0px 5px white !important;
+    border-radius: 24px;
+}
+
+.side-text-color {
+    color: teal;
+}
+
+/* ----------------------------- Lobby View Style ----------------------------- */
+
+.lobby-card-title {
+    color: #002E2E;
+}
+
+.lobby-card1 {
+    border: 2px solid white;
+    background-color: #ffa500;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px white !important; */
+}
+
+.lobby-card2 {
+    border: 2px solid white;
+    background-color: orange;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px white !important; */
+}
+
+.lobby-card3 {
+    border: 2px solid white;
+    background-color:orange;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px white !important; */
+}
+
+.lobby-card4 {
+    border: 2px solid white;
+    background-color:orange;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px white !important; */
+}
+
+/* ----------------------------- Tournament View Style ----------------------------- */
+
+.custom-btn {
+    background-color: orange;
+    color: teal;
+    font-weight: bold;
+    border: 3px solid white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 128, 128, 0.7);
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: teal;
+    color: white;
+    border-color: white;
+    box-shadow: 0 0 20px orange;
+}
+
+.card {
+    background-color: #008080 !important;
+    box-shadow: 0 0 20px white !important;
+}
+
+.card-header {
+    color: black !important;
+    background-color: #ffa500 !important;
+    box-shadow: 0px 0px 5px white !important;
+}
+
+/* ----------------------------- Statistics View Style ----------------------------- */
+
+.stats-card {
+    border: 3px solid white;
+    background-color: orange;
+    border-radius: 10px;
+    height: 80vh;
+    padding: 1rem;
+}
+
+.stats-container {
+    padding: 7rem;
+    min-width: 850px;
+}
+
+.text-teal {
+    color: #008080 !important;
+}
+
+/* ----------------------------- Settings View Style ----------------------------- */
+
+.settings-wrapper {
+    width: 1200px;
+    gap: 20px;
+    padding: 40px 10px 40px 100px;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.settings-container {
+    background-color: orange;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid white;
+}
+
+#save_settings {
+    background-color: #005252;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 30px 0px;
+}
+
+#settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#settings-form label {
+    font-weight: bold;
+    color: #005252;
+    font-size: 1rem;
+}
+
+#settings-form select,
+#settings-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-settings-container {
+    width: 490px;
+    background-color: orange;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px gray;
+    border: 4px solid white;
+}
+
+.player-settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.player-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #005252;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.player-box:hover {
+    transform: scale(1.03);
+    padding: 20px;
+    background-color: white;
+}
+
+.player-box:hover .player-config {
+    display: block;
+}
+
+.player1:hover { background-color: #ff9999; }
+.player2:hover { background-color: #99ccff; }
+.player3:hover { background-color: #99ff99; }
+.player4:hover { background-color: #ffdb99; }
+
+.player-config {
+    display: none;
+    width: 100%;
+}
+
+.player-config label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.player-config input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    border: none;
+    margin-top: 4px;
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #005252;
+}
